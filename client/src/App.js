@@ -1,9 +1,11 @@
 import React from 'react';
-
 import axios from 'axios';
+import { useStyles } from './hooks/useStyles';
 import './App.css';
 
 class App extends React.Component {
+
+
   state = {
     players: []
   };
@@ -28,9 +30,7 @@ class App extends React.Component {
       <div className="App">
         <div>
           
-
-          
-              <h2>Players</h2>
+              <h2 className={ useStyles.fontStyling }>Players</h2>
               
                 {this.state.players.map( player => (
 
