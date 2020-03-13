@@ -43,9 +43,19 @@ Life Cycle:
 
 - [ ] What is the purpose of a custom hook?
 
-
+Custom Hooks are hooks a programmer can build and customize as need to apply non-visual behavior and stateful logic throughout the project's components. This allows the hook to be used over and over. Custom hooks follow the same patterns of naming (ie, useState (camel-case)). You can build a reusable custom hook for anything from handling controlled inputs, to managing event listeners, or watching for key presses.
 
 - [ ] Why is it important to test our apps?
+
+Automated testing minimizes the risk of bugs finding their way into production code. Here are the benefits of using automated testing:
+
+1. Surfaces bugs faster.
+2. Reduces the risk of regressions.
+3. Allows us to trust the code.
+4. Makes us think about the edge cases.
+5. Acts as a safety net when making changes or refactoring.
+6. Acts as documentation for the code.
+7. Encourages us to write more testable (better!) code.
 
 ## Project Set Up
 
