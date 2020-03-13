@@ -5,23 +5,20 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    users: [],
-    searchText: '',
-    followers: []
+    players: []
   };
 
   componentDidMount() {
-
-
     axios
-        .get(`https://api.github.com/users/eddiemadrigal/followers`)
+        // .get(`https://cors-anywhere.herokuapp.com/https://eddiemadrigal.net/data.js`)
+        .get('https://api.github.com/users/eddiemadrigal/followers')
         .then(res => {
           this.setState({
-            followers: res.data
+            players: res.data
           });
+          console.log(this.state.players)
         })
         .catch(err => console.log(err));
-
   }
 
   
@@ -33,14 +30,14 @@ class App extends React.Component {
           
 
           
-              <h2>Followers</h2>
+              <h2>Players</h2>
               
-                {this.state.followers.map( follower => (
+                {this.state.players.map( player => (
 
-                  <div className="card-info" key={ follower.id }>
-                    <div>
-                      <h2>Name: { follower.name }</h2>
-                    </div>
+                  <div key={ player.id }>
+                    <ul>
+                      <li>Player: { player.login }</li>
+                    </ul>
                   </div>
 
                 ))}
