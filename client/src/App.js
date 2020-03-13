@@ -32,7 +32,6 @@ class App extends React.Component {
       <div className="App">
         <div>
           <Hooks />
-              <h2>Players</h2>
               
                 {this.state.players.map( player => (
 
