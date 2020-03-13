@@ -22,9 +22,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
+- [X] Why would you use class component over function components (removing hooks from the question)?
+
+React lets you define components as classes or functions. Components defined as classes currently provide more features.  Class components make use of the ES6 class syntax. Since classes can have methods, these components can make use of life cycle methods like componentWillMount and componentDidMount.  Functional components, unlike class components, are stateless and that they also do not support life cycle methods. 
+
+Functional components:
+1. don’t have state
+2. don’t have life cycle methods
+3. don’t have a this
+
+- [X] Name three lifecycle methods and their purposes.
+
+Life Cycle:
+
+1. Mounting: constructor, getDerivedStateFromProps, render and componentDidMount (birth phase). Here, this phase is being built out from the nothing.  The constructor holds the initial data your app will use. In this phase, the render method is invoked and the the compoentDidMount gets called as well.
+
+2. Updating: New props (getDerivedStateFromProps, shouldComponentUpdate, render) (growth / updating phase). In the growth / updating phase, setState can be used to change the component's state data, for a call to render.  Also, shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary
+
+3. Unmounting: componentWillUnmount (death phase). The unmounting phase includes removing the component from the screen.  Also, componentWillUnmount is called and can be used for any memory cleanup (i.e., localStorage data) as needed
+
 - [ ] What is the purpose of a custom hook?
+
+
+
 - [ ] Why is it important to test our apps?
 
 ## Project Set Up
