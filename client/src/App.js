@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Hooks from './Hooks';
+import Footer from './Footer';
 import './App.css';
 
 class App extends React.Component {
@@ -20,7 +21,7 @@ class App extends React.Component {
           this.setState({
             players: res.data
           });
-          console.log(this.state.players)
+          console.log("Followers: ", this.state.players)
         })
         .catch(err => console.log(err));
   }
@@ -37,13 +38,13 @@ class App extends React.Component {
 
                   <div key={ player.id }>
                     <ul>
-                      <li>Player: { player.login }</li>
+                      <li >Player: { player.login }</li>
                     </ul>
                   </div>
 
                 ))}
-
         </div>
+        <Footer />
       </div>
     );
   }
