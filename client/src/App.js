@@ -1,14 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import { useStyles } from './hooks/useStyles';
+import Hooks from './Hooks';
 import './App.css';
 
 class App extends React.Component {
 
-
-  state = {
-    players: []
-  };
+  constructor() {
+    super();
+    this.state = {
+      players: []
+    };
+  }
 
   componentDidMount() {
     axios
@@ -29,8 +31,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>
-          
-              <h2 className={ useStyles.fontStyling }>Players</h2>
+          <Hooks />
+              <h2>Players</h2>
               
                 {this.state.players.map( player => (
 
